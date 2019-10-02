@@ -58,9 +58,28 @@
     <li class="nav-item">
       <a class="nav-link" href="#section1">Início</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#section2">Áreas</a>
-    </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Áreas
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <?php
+
+              require_once "conexao.php";
+              $query = "select nome from area";
+              $result =$conn->query($query);
+              if(!$result) die("Fatal Error");
+              $rows = $result->num_rows;
+
+              for($j = 0; $j < $rows; ++$j){
+                  echo "<a class='dropdown-item' href='#'>" . $result->fetch_assoc()['nome'] . "</a>";
+              }
+              ?>
+              <a class="dropdown-item" href="#">Outra ação</a>
+              <div class="dropdown-divider"></div>
+              <a class=" dropdown-item" href="#section2">Mais...</a>
+          </div>
+      </li>
     <li class="nav-item">
        <li class="nav-item">
       <a class="nav-link" href="#section6">Mercado</a>
@@ -70,6 +89,10 @@
     <li class="nav-item">
       <a class="nav-link" href="#section8">Sobre nós</a>
     </li>
+      <li class="nav-item">
+          <a class="nav-link" href="home.php">Admin</a>
+      </li>
+
   </ul>
 </nav>
 
