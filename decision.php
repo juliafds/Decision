@@ -23,7 +23,7 @@
 </head>
 
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<div data-spy="scroll" data-target=".navbar" data-offset="50">
 
   <!--
     https://getbootstrap.com.br/docs/4.1/utilities/spacing/
@@ -75,7 +75,6 @@
                   echo "<a class='dropdown-item' href='#'>" . $result->fetch_assoc()['nome'] . "</a>";
               }
               ?>
-              <a class="dropdown-item" href="#">Outra ação</a>
               <div class="dropdown-divider"></div>
               <a class=" dropdown-item" href="#section2">Mais...</a>
           </div>
@@ -166,48 +165,18 @@
       <div class="card mb-5  ">
           <img class="card-img-top" img src="https://www.w3schools.com/bootstrap4/newyork.jpg">
         <div class="card-body">   
-            <h4 class="card-title">Exatas</h4>
+            <a href="#"><h4 class="card-title">Exatas</h4></a>
             <h6 class="subtitle-card mb-2 text-muted">Sed ut perspiciatis unde omnis </h6>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="card-link">inventore</a>
-            <a href="#" class="card-link">dolore</a>
+
 
         </div>
       </div>
     </div>
-    
-    <div class="col-sm-6 col-md-4">
-        <div class="card mb-5" >
-            <img class="card-img-top" img src="https://www.w3schools.com/bootstrap4/sanfran.jpg">
-          <div class="card-body">             
-              <h4 class="card-title">Biológicas</h4>
-            <h6 class="subtitle-card mb-2 text-muted">Sed ut perspiciatis unde omnis </h6>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#" class="card-link">inventore</a>
-            <a href="#" class="card-link">dolore</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-sm-6 col-md-4">
-          <div class="card mb-5  ">
-            
-              <img class="card-img-top" img src="https://www.w3schools.com/bootstrap4/paris.jpg">
-            <div class="card-body">       
-                <h4 class="card-title">Humanas</h4>
-                <h6 class="subtitle-card mb-2 text-muted">Sed ut perspiciatis unde omnis </h6>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a href="#" class="card-link">inventore</a>
-                <a href="#" class="card-link">dolore</a>
-            </div>
-          </div>
-        </div>
-  </div> 
-  
-
   </div>
 
 
+  </div>
 </div>
 
 

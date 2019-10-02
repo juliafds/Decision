@@ -16,7 +16,7 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">  
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="teste.php">Início</a>
+      <a class="nav-link" href="decision.php">Início</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#section1">Section 1</a>
