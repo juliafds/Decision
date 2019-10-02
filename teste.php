@@ -1,7 +1,6 @@
-<html>
+<html lang="pt-br">
 <head>
   <title>Teste</title>
-  <html lang="pt-br">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -35,7 +34,7 @@
     * my-1 my-2 ... my-5  (margem no eixo y)
     * mt-1 mt-2 ... mt-5  (margem somente no topo)
     * container (cria um "bloco" que já deixa os componentes responsivos)
-    * container-fluid (faz ele usar todo o espaço disponível)
+    * container-fluid (faz ele usar)
     * row (separa uma linha)
     * col (separa as colunas)  vai no w3schools ou bootstrap/documentation e vê mais sobre isso 
     * bg-success  bg-warning  bg-primary (são as cores de fundo padrão do bootstrap: bg -> background) 
