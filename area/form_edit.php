@@ -21,7 +21,7 @@
 require_once '..\conexao.php';
 
 $id = $_GET["id"];
-$query = "select id, nome, descricao, mercado from area where id=$id";
+$query = "select id, nome, descricao, mercado,imagem,peqdesc from area where id=$id";
 $result = $conn->query($query);
 if(!$result) die("Fatal Error");
 $rows = $result->num_rows;
@@ -32,6 +32,8 @@ if ($rows == 0)
     $nome = '';
     $descricao = '';
     $mercado = '';
+    $imagem = '';
+    $peqdesc = '';
     $nome_submit = 'Inserir';
 }
 else
@@ -42,6 +44,8 @@ else
     $nome = $row['nome'];
     $descricao = $row['descricao'];
     $mercado = $row['mercado'];
+    $imagem = $row['imagem'];
+    $peqdesc = $row['peqdesc'];
     $nome_submit = 'Alterar';
 }
 
@@ -68,6 +72,16 @@ echo <<<_END
     <div class="form-group">
         <label for="mercado">Mercado</label>
         <textarea class="form-control" id="mercado" name="mercado" rows="3">$mercado</textarea>
+    </div>
+    
+    <div class="form-group">
+        <label for="imagem">Imagem</label>
+        <input type="text" class="form-control" id="imagem" name="imagem" value="$imagem">
+    </div>
+    
+    <div class="form-group">
+        <label for="peqdesc">Pequena Descrição</label>
+        <textarea class="form-control" id="peqdesc" name="peqdesc" rows="3">$peqdesc</textarea>
     </div>
     
     <input type="submit" class="btn btn-primary" name="$nome_submit" value="$nome_submit">

@@ -10,17 +10,19 @@ if (($objetivo == 'A') || ($objetivo == 'I'))
     $duracao = $_POST["duracao"];
     $disciplinas = $_POST["disciplinas"];
     $descricao = $_POST["descricao"];
+    $imagem = $_POST["imagem"];
+    $peqdesc = $_POST["peqdesc"];
     $area_id= $_POST["area_id"];
     if ($objetivo == 'A')
     {
-        $query = "update subarea set nome='$nome', duracao='$duracao', disciplinas='$disciplinas',descricao='$descricao', area_id='$area_id' where id=$id";
+        $query = "update subarea set nome='$nome', duracao='$duracao', disciplinas='$disciplinas',descricao='$descricao', imagem='$imagem',peqdesc='$peqdesc', area_id='$area_id' where id=$id";
         echo "$query";
         $result = $conn->query($query);
         if(!$result) die("Fatal Error");
     }
     if ($objetivo == 'I')
     {
-        $query = "insert into subarea (nome,duracao,disciplinas,descricao,area_id) values ('$nome','$duracao','$disciplinas','$descricao', '$area_id')";
+        $query = "insert into subarea (nome,duracao,disciplinas,descricao,imagem,peqdesc,area_id) values ('$nome','$duracao','$disciplinas','$descricao','$imagem','$peqdesc', '$area_id')";
         $result = $conn->query($query);
         if(!$result) die("Fatal Error");
     }

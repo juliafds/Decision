@@ -1,6 +1,6 @@
 <html lang="pt-br">
 <head>
-  <title>Teste</title>
+  <title>Decision</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -166,7 +166,6 @@
           <img class="card-img-top" img src="https://www.w3schools.com/bootstrap4/newyork.jpg">
         <div class="card-body">   
             <a href="#"><h4 class="card-title">Exatas</h4></a>
-            <h6 class="subtitle-card mb-2 text-muted">Sed ut perspiciatis unde omnis </h6>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
 

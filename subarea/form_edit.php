@@ -21,7 +21,7 @@
 require_once '..\conexao.php';
 
 $id = $_GET["id"];
-$query = "select subarea.id, subarea.nome, subarea.duracao, subarea.disciplinas, subarea.descricao, subarea.area_id, area.nome as area from subarea inner join area on subarea.area_id = area.id where subarea.id=$id";
+$query = "select subarea.id, subarea.nome, subarea.duracao, subarea.disciplinas, subarea.descricao,subarea.imagem,subarea.peqdesc, subarea.area_id, area.nome as area from subarea inner join area on subarea.area_id = area.id where subarea.id=$id";
 
 $result = $conn->query($query);
 if(!$result) die("Fatal Error");
@@ -34,6 +34,8 @@ if ($rows == 0)
     $duracao = '';
     $disciplinas = '';
     $descricao = '';
+    $imagem = '';
+    $peqdesc = '';
     $area_id = '';
     $area_nome = '';
     $nome_submit = 'Inserir';
@@ -47,6 +49,8 @@ else
     $duracao = $row['duracao'];
     $disciplinas = $row['disciplinas'];
     $descricao = $row['descricao'];
+    $imagem = $row['imagem'];
+    $peqdesc = $row['peqdesc'];
     $area_id = $row['area_id'];
     $area_nome = $row['area'];
     $nome_submit = 'Alterar';
@@ -82,6 +86,16 @@ echo <<<_END
         <textarea class="form-control" id="descricao" name="descricao" rows="3">$descricao</textarea>
     </div>
     
+     <div class="form-group">
+        <label for="imagem">Imagem</label>
+        <input type="text" class="form-control" id="imagen" name="imagem" value="$imagem">
+    </div>
+    
+    <div class="form-group">
+        <label for="peqdesc">Pequena Descrição</label>
+        <textarea class="form-control" id="peqdesc" name="peqdesc" rows="3">$peqdesc</textarea>
+    </div>
+    
     <label for="area_id">Selecione a área</label>
     <select class="form-control" name="area_id">
     <option>Selecione...</option>
@@ -95,7 +109,7 @@ for ($j = 0; $j < $rows1; ++$j)
 {
     $result1->data_seek($j);
     $row1 = $result1->fetch_assoc();
-    if ($row1['id'] == $rows['area_id'])
+    if ($row1['id'] == $row['area_id'])
     {
         echo "<option value=".$row1['id']."  selected>".$row1['nome']."</option>";
     }

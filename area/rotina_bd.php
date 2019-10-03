@@ -9,16 +9,18 @@ if (($objetivo == 'A') || ($objetivo == 'I'))
     $nome = $_POST["nome"];
     $descricao = $_POST["descricao"];
     $mercado = $_POST["mercado"];
+    $imagem = $_POST["imagem"];
+    $peqdesc = $_POST["peqdesc"];
     if ($objetivo == 'A')
     {
-        $query = "update area set nome='$nome', descricao='$descricao', mercado='$mercado' where id=$id";
+        $query = "update area set nome='$nome', descricao='$descricao', mercado='$mercado', imagem ='$imagem', peqdesc='$peqdesc' where id=$id";
         echo "$query";
         $result = $conn->query($query);
         if(!$result) die("Fatal Error");
     }
     if ($objetivo == 'I')
     {
-        $query = "insert into area (nome,descricao,mercado) values ('$nome', '$descricao', '$mercado')";
+        $query = "insert into area (nome,descricao,mercado,imagem,peqdesc) values ('$nome', '$descricao', '$mercado','$imagem','$peqdesc')";
         $result = $conn->query($query);
         if(!$result) die("Fatal Error");
     }

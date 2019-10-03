@@ -20,7 +20,7 @@
 <?php
 require_once '..\conexao.php';
 
-$query = "select id, nome, descricao, mercado from area";
+$query = "select id, nome, descricao, mercado,imagem, peqdesc from area";
 $result = $conn->query($query);
 if(!$result) die("Fatal Error");
 $rows = $result->num_rows;
@@ -32,6 +32,8 @@ echo <<<_END
 <th>Nome</th>
 <th>Descrição</th>
 <th>Mercado</th>
+<th>Imagem</th>
+<th>Pequena descrição</th>
 <th> Excluir </th>
 </tr>
 _END;
@@ -45,6 +47,8 @@ for ($j = 0; $j < $rows; ++$j){
     echo "<td><a href='form_edit.php?id=$id'>" . $row['nome'] . "</a></td>";
     echo "<td><a href='form_edit.php?id=$id'>" . $row['descricao'] . "</a></td>";
     echo "<td><a href='form_edit.php?id=$id'>" . $row['mercado'] . "</a></td>";
+    echo "<td><a href='form_edit.php?id=$id'>" . $row['imagem'] . "</a></td>";
+    echo "<td><a href='form_edit.php?id=$id'>" . $row['peqdesc'] . "</a></td>";
     echo "<td><a href='javascript:confirmaExclusao($id);' class=\"btn btn-secondary btn-lg active\" role=\"button\">X</a></td>";
     echo "</tr>";
 }
