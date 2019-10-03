@@ -161,17 +161,40 @@
 
     <!-- criando os cards -->
   <div class="row justify-content-sm-center" style="padding:0px">
-    <div class="col-sm-6 col-md-4 ">
+
+      <?php
+
+      require_once "conexao.php";
+      $query = "select nome, imagem, peqdesc from area";
+      $result =$conn->query($query);
+      if(!$result) die("Fatal Error");
+
+      $rows = $result->num_rows;
+      for($j = 0; $j< $rows; ++$j){
+          $row = $result->fetch_assoc();
+          $nome = $row['nome'];
+          $imagem = $row['imagem'];
+          $peqdesc= $row['peqdesc'];
+          echo <<<END
+
+<div class="col-sm-6 col-md-4 ">
       <div class="card mb-5  ">
-          <img class="card-img-top" img src="https://www.w3schools.com/bootstrap4/newyork.jpg">
+          <img class="card-img-top" img src="$imagem" style="height: 200px">
         <div class="card-body">
-            <a href="#"><h4 class="card-title">Exatas</h4></a>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="#"><h4 class="card-title">$nome</h4></a>
+            <p class="card-text">$peqdesc</p>
 
 
         </div>
       </div>
     </div>
+
+END;
+
+      }
+      ?>
+
+
   </div>
 
 
