@@ -95,6 +95,7 @@ echo <<<END
 
 END;
 
+
 for($j = 0; $j < $rows; ++$j){
     $row = $result->fetch_assoc();
     $nome = $row['nome'];
@@ -104,24 +105,23 @@ for($j = 0; $j < $rows; ++$j){
     echo <<<END
 
 <center><div class="row card mb-3 my-4 border-0" style="max-width: 90%">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <img src="$imagem" class="card-img " alt="oioioi">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <a href="#"><h5 class="card-title">$nome</h5></a>
-                <p class="card-text">$peqdesc</p>
-             
-              </div>
-            </div>
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="$imagem" class="card-img " alt="oioioi">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <a href="#"><h5 class="card-title">$nome</h5></a>
+            <p class="card-text">$peqdesc</p>
+         
           </div>
-        </div></center>
+        </div>
+      </div>
+    </div></center>
 
 END;
 
 }
-
 
 echo <<<END
             </div>
@@ -131,7 +131,6 @@ echo <<<END
 END;
 
 ?>
-
 
 <div id="section4" class="container-fluid bg-secondary" style="padding-top:70px;padding-bottom:70px">
     <div class="container r">
