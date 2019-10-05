@@ -66,13 +66,15 @@
               <?php
 
               require_once "conexao.php";
-              $query = "select nome from area";
+              $query = "select id, nome from area";
               $result =$conn->query($query);
               if(!$result) die("Fatal Error");
               $rows = $result->num_rows;
 
               for($j = 0; $j < $rows; ++$j){
-                  echo "<a class='dropdown-item' href='#'>" . $result->fetch_assoc()['nome'] . "</a>";
+                  $row = $result->fetch_assoc();
+                  $id = $row['id'];
+                  echo "<a class='dropdown-item' href='areas.php?id=$id'>" . $row['nome'] . "</a>";
               }
               ?>
               <div class="dropdown-divider"></div>
@@ -165,13 +167,14 @@
       <?php
 
       require_once "conexao.php";
-      $query = "select nome, imagem, peqdesc from area";
+      $query = "select id, nome, imagem, peqdesc from area";
       $result =$conn->query($query);
       if(!$result) die("Fatal Error");
 
       $rows = $result->num_rows;
       for($j = 0; $j< $rows; ++$j){
           $row = $result->fetch_assoc();
+          $id = $row['id'];
           $nome = $row['nome'];
           $imagem = $row['imagem'];
           $peqdesc= $row['peqdesc'];
@@ -181,7 +184,7 @@
       <div class="card mb-5  ">
           <img class="card-img-top" img src="$imagem" style="height: 200px">
         <div class="card-body">
-            <a href="#"><h4 class="card-title">$nome</h4></a>
+            <a href="areas.php?id=$id"><h4 class="card-title">$nome</h4></a>
             <p class="card-text">$peqdesc</p>
 
 
