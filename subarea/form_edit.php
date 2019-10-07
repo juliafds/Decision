@@ -98,7 +98,7 @@ echo <<<_END
     
     <label for="area_id">Selecione a área</label>
     <select class="form-control" name="area_id">
-    <option>Selecione...</option>
+    <option value="erro">Selecione...</option>
 _END;
 $query1 = "SELECT id, nome FROM area";
 
@@ -125,6 +125,7 @@ echo <<<_END
     <input type="submit" class="btn btn-primary" name="$nome_submit" value="$nome_submit">
     <input type="button" class="btn btn-primary" name="Voltar" value="Voltar" onclick="window.location='form_list.php'">
 </form>
+
 _END;
 echo "</body></html>";
 ?>
