@@ -108,7 +108,7 @@ for($j = 0; $j < $rows; ++$j){
 <center><div class="row card mb-3 my-4 border-0" style="max-width: 90%">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img src="$imagem" class="card-img rounded-circle" alt="oioioi" style="width:270px; height:250px">
+          <img src="$imagem" class="card-img " alt="oioioi">
         </div>
         <div class="col-md-8">
           <div class="card-body">
