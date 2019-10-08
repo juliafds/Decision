@@ -20,7 +20,7 @@
 <?php
 require_once '..\conexao.php';
 
-$query = "select subarea.id, subarea.nome, subarea.duracao, subarea.disciplinas, subarea.descricao, subarea.imagem, subarea.peqdesc, subarea.area_id, area.nome as area from subarea inner join area on subarea.area_id = area.id";
+$query = "select subarea.id, subarea.nome, subarea.duracao, subarea.disciplinas, subarea.descricao, subarea.imagem, subarea.peqdesc, subarea.area_id, subarea.mercado, area.nome as area from subarea inner join area on subarea.area_id = area.id";
 
 $result = $conn->query($query);
 if(!$result) die("Fatal Error");
@@ -36,6 +36,7 @@ echo <<<_END
 <th>Descrição</th>
 <th>Imagem</th>
 <th>Pequena Descrição</th>
+<th>Mercado</th>
 <th>Área</th>
 <th> Excluir </th>
 </tr>
@@ -53,12 +54,14 @@ for ($j = 0; $j < $rows; ++$j){
     echo "<td><a href='form_edit.php?id=$id'>" . $row['descricao'] . "</a></td>";
     echo "<td><a href='form_edit.php?id=$id'>" . $row['imagem'] . "</a></td>";
     echo "<td><a href='form_edit.php?id=$id'>" . $row['peqdesc'] . "</a></td>";
+    echo "<td><a href='form_edit.php?id=$id'>" . $row['mercado'] . "</a></td>";
     echo "<td><a href='form_edit.php?id=$id'>". $row['area_id'] . " - " . $row['area'] . "</a></td>";
     echo "<td><a href='javascript:confirmaExclusao($id);' class=\"btn btn-secondary btn-lg active\" role=\"button\">X</a></td>";
     echo "</tr>";
 }
 echo "</table>";
-echo "<a class=\"btn btn-primary\" href=\"form_edit.php?id=0\" role=\"button\">Inserir</a>";
+echo "<a class=\"btn btn-primary\" href=\"form_edit.php?id=0\" role=\"button\">Inserir</a>". "<br><br>";
+
 echo "</body></html>";
 ?>
 <script>

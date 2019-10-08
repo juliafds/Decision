@@ -193,7 +193,6 @@
     </div>
 
 END;
-
       }
       ?>
 
@@ -206,29 +205,52 @@ END;
 
 
 <div id="section6" class="container-fluid" style="padding-top:70px;padding-bottom:70px; background-color: #ffffff;">
-  <div class="container">
-    <div class="row">
-    <div class="col-12 text-center my-4">
-      <h1 class="display-3">Mercado de trabalho</h1>
-      <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-      </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center my-4">
+                    <h1 class="display-4">Mercado de trabalho</h1>
+                    <br>
+                    <p align="justify">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+    <div id="section6" class="container-fluid" style="padding-top:70px;padding-bottom:70px; background-color: #ffffff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center my-4">
+                    <h1 class="display-4">O que somos nós?</h1>
+                    <br>
+                    <p align="justify">
+
+                    O projeto nomeado de “Decision” é uma plataforma online que prototipamos e estamos a desenvolver. e forma que estaremos disponibilizando em nossa plataforma áreas do mercado de trabalho, cursos, universidades e até mesmo um quiz. E com tudo sempre voltado para futuros acadêmicos que ainda não sabem o que cursar e pretendem buscar ao menos uma noção do que lhe trará uma maior afinidade.
+                        A ideia surgiu a partir de que nós mesmos, estudantes, nem sempre saímos do ensino médio com a certeza do que realmente queremos para nosso futuro. Então, por quê não fazer um projeto integrando tudo o que nós já aprendemos para realizar algo que possa nos conceder uma base para o nosso futuro?
+                        Sendo assim, esperamos realizar um projeto diferenciado dos outros e com uma boa qualidade de conhecimento e estética do site.
+
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+
+
 
 <div id="section8" class="container-fluid" style="padding-top:70px;padding-bottom:70px; background-color:#ffffff;">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center my-5">
-              <h1 class="display-4">Sobre nós</h1>   
+              <h1 class="display-4">Sobre nós</h1>
+                <br>
             </div>
           </div>
 
      <div class="col-sm-6 col-md-4">
               <img class="card-img-top" img src="Imagens/gabi.jpeg">
-            <div class="card-body">       
+            <div class="card-body">
                 <h4 class="card-title" style="text-align: center;">Gabriela Neves</h4>
             </div>
           </div>
@@ -273,12 +295,7 @@ END;
           </div>
         </div>
         <!----------------------------Bianca------------------------------->
-        <div class="container">
-        <p style="text-align: center;">O projeto nomeado de “Decision” é uma plataforma online que prototipamos e estamos a desenvolver. e forma que estaremos disponibilizando em nossa plataforma áreas do mercado de trabalho, cursos, universidades e até mesmo um quiz. E com tudo sempre voltado para futuros acadêmicos que ainda não sabem o que cursar e pretendem buscar ao menos uma noção do que lhe trará uma maior afinidade.
-        A ideia surgiu a partir de que nós mesmos, estudantes, nem sempre saímos do ensino médio com a certeza do que realmente queremos para nosso futuro. Então, por quê não fazer um projeto integrando tudo o que nós já aprendemos para realizar algo que possa nos conceder uma base para o nosso futuro?  
-        Sendo assim, esperamos realizar um projeto diferenciado dos outros e com uma boa qualidade de conhecimento e estética do site.
-        </p>
-        </div>
+
       </div>
     </div>
 </div>

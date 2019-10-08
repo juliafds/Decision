@@ -52,7 +52,7 @@ echo <<<END
     <div class="col-12 text-center my-5">
     <h1 class="display-4 ">$nome</h1>
       <br>
-     <p>$desc</p>
+     <p align="justify">$desc</p>
     </div>
   </div>
   </div>
@@ -62,9 +62,9 @@ echo <<<END
   <div class="container">
    <div class="row">
    <div class="col-12 text-center my-5">
-     <h5 class="display-4">Mercado na área de $nome</h5 class="display-4">
+     <h5 class="display-4">Mercado</h5 class="display-4">
      <br>
-     <p>$mercado</p>
+     <p align="justify">$mercado</p>
    </div>
  </div>
  </div>
@@ -100,7 +100,8 @@ for($j = 0; $j < $rows; ++$j){
     $row = $result->fetch_assoc();
     $nome = $row['nome'];
     $peqdesc = $row['peqdesc'];
-    $imagem =$row['imagem'];
+    $imagem = $row['imagem'];
+    $id = $row['id'];
 
     echo <<<END
 
@@ -111,8 +112,9 @@ for($j = 0; $j < $rows; ++$j){
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <a href="#"><h5 class="card-title">$nome</h5></a>
-            <p class="card-text">$peqdesc</p>
+            <a href="subareas.php?id=$id"><h5 class="card-title">$nome</h5></a>
+             <br>
+            <p class="card-text" align="justify">$peqdesc</p>
          
           </div>
         </div>

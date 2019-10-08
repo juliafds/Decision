@@ -21,7 +21,7 @@
 require_once '..\conexao.php';
 
 $id = $_GET["id"];
-$query = "select subarea.id, subarea.nome, subarea.duracao, subarea.disciplinas, subarea.descricao,subarea.imagem,subarea.peqdesc, subarea.area_id, area.nome as area from subarea inner join area on subarea.area_id = area.id where subarea.id=$id";
+$query = "select subarea.id, subarea.nome, subarea.duracao, subarea.disciplinas, subarea.descricao,subarea.imagem,subarea.peqdesc, subarea.area_id, subarea.mercado, area.nome as area from subarea inner join area on subarea.area_id = area.id where subarea.id=$id";
 
 $result = $conn->query($query);
 if(!$result) die("Fatal Error");
@@ -36,6 +36,7 @@ if ($rows == 0)
     $descricao = '';
     $imagem = '';
     $peqdesc = '';
+    $mercado = '';
     $area_id = '';
     $area_nome = '';
     $nome_submit = 'Inserir';
@@ -51,6 +52,7 @@ else
     $descricao = $row['descricao'];
     $imagem = $row['imagem'];
     $peqdesc = $row['peqdesc'];
+    $mercado = $row['mercado'];
     $area_id = $row['area_id'];
     $area_nome = $row['area'];
     $nome_submit = 'Alterar';
@@ -88,13 +90,19 @@ echo <<<_END
     
      <div class="form-group">
         <label for="imagem">Imagem</label>
-        <input type="text" class="form-control" id="imagen" name="imagem" value="$imagem">
+        <input type="text" class="form-control" id="imagem" name="imagem" value="$imagem">
     </div>
     
     <div class="form-group">
         <label for="peqdesc">Pequena Descrição</label>
         <textarea class="form-control" id="peqdesc" name="peqdesc" rows="3">$peqdesc</textarea>
     </div>
+    
+    <div class="form-group">
+        <label for="mercado">Mercado</label>
+        <textarea class="form-control" id="mercado" name="mercado" rows="3">$mercado</textarea>
+    </div>
+    
     
     <label for="area_id">Selecione a área</label>
     <select class="form-control" name="area_id">
