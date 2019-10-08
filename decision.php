@@ -181,8 +181,8 @@
           echo <<<END
 
 <div class="col-sm-6 col-md-4 ">
-      <div class="card mb-5  ">
-          <img class="card-img-top" img src="$imagem" style="height: 200px">
+      <div class="card mb-5 border-0">
+          <img class="card-img-top rounded-circle" img src="$imagem" style="width:270px; height:250px">
         <div class="card-body">
             <a href="areas.php?id=$id"><h4 class="card-title">$nome</h4></a>
             <p class="card-text">$peqdesc</p>
