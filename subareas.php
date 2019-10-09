@@ -37,7 +37,7 @@ echo <<<END
 </head>    
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">  
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color: #19256c">  
   <ul class="navbar-nav">
     <li class="nav-item">
       <a class="nav-link" href="decision.php">Início</a>

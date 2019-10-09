@@ -15,7 +15,7 @@
  
   .carousel-inner img {
     width: 100%;
-    height: 60%;
+    height: 100%;
   }
   
 
@@ -53,7 +53,7 @@
 
   <!-- barra de navegação do site  (não edita aqui >:-p  ) -->
 <!--------------------------------------navbar----------------------------------------->
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top fixed-top">  
+<nav class="navbar navbar-expand-sm navbar-dark sticky-top fixed-top" style="background-color: #19256c">
   <ul class="navbar-nav">
     <li class="nav-item">
       <a class="nav-link" href="#section1">Início</a>
