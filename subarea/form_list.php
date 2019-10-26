@@ -42,6 +42,8 @@ echo <<<_END
 </tr>
 _END;
 
+echo "<br><br><a class=\"btn btn-primary\" href=\"form_edit.php?id=0\" role=\"button\">Inserir</a>". "<br><br>";
+
 for ($j = 0; $j < $rows; ++$j){
     $result->data_seek($j);
     $row = $result->fetch_assoc();

@@ -77,8 +77,6 @@
                   echo "<a class='dropdown-item' href='areas.php?id=$id'>" . $row['nome'] . "</a>";
               }
               ?>
-              <div class="dropdown-divider"></div>
-              <a class=" dropdown-item" href="#section2">Mais...</a>
           </div>
       </li>
     <li class="nav-item">

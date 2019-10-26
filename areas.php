@@ -1,21 +1,6 @@
 <html>
-
-    <?php
-    require_once "conexao.php";
-    $id = $_GET["id"];
-
-    $query = "select id, nome, descricao, mercado, imagem, peqdesc from area where id='$id';";
-    $result =$conn->query($query);
-    if(!$result) die("Fatal Error");
-
-    $row = $result->fetch_assoc();
-    $nome = $row['nome'];
-    $desc = $row['descricao'];
-    $mercado = $row['mercado'];
-
-echo <<<END
 <head>
-<title>$nome</title>
+<title>Decision</title>
 <meta charset="utf-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -31,9 +16,27 @@ echo <<<END
     <li class="nav-item">
       <a class="nav-link" href="decision.php">Início</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#section1">$nome</a>
-    </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Áreas
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <?php
+
+              require_once "conexao.php";
+              $query = "select id, nome from area";
+              $result =$conn->query($query);
+              if(!$result) die("Fatal Error");
+              $rows = $result->num_rows;
+
+              for($j = 0; $j < $rows; ++$j){
+                  $row = $result->fetch_assoc();
+                  $id = $row['id'];
+                  echo "<a class='dropdown-item' href='areas.php?id=$id'>" . $row['nome'] . "</a>";
+              }
+              ?>
+          </div>
+      </li>
     <li class="nav-item">
       <a class="nav-link" href="#section2">Mercado</a>
     </li>
@@ -46,6 +49,21 @@ echo <<<END
    
   </ul>
 </nav>
+
+<?php
+    require_once "conexao.php";
+    $id = $_GET["id"];
+
+    $query = "select id, nome, descricao, mercado, imagem, peqdesc from area where id='$id';";
+    $result =$conn->query($query);
+    if(!$result) die("Fatal Error");
+
+    $row = $result->fetch_assoc();
+    $nome = $row['nome'];
+    $desc = $row['descricao'];
+    $mercado = $row['mercado'];
+
+    echo <<<END
 <div id="section1" class="container-fluid " style="padding-top:70px;padding-bottom:10px; background-color: #ffffff">
    <div class="container">
     <div class="row">

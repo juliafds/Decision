@@ -1,4 +1,58 @@
 <html>
+
+
+<head>
+<title>Decision</title>
+<meta charset="utf-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="icon" href="Imagens/ultimo.png">
+  <!--isso é o icone do decision no title-->
+</head>    
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color: #19256c">  
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="decision.php">Início</a>
+    </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Áreas
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <?php
+
+              require_once "conexao.php";
+              $query = "select id, nome from area";
+              $result =$conn->query($query);
+              if(!$result) die("Fatal Error");
+              $rows = $result->num_rows;
+
+              for($j = 0; $j < $rows; ++$j){
+                  $row = $result->fetch_assoc();
+                  $id = $row['id'];
+                  echo "<a class='dropdown-item' href='areas.php?id=$id'>" . $row['nome'] . "</a>";
+              }
+              ?>
+          </div>
+      </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section2">Mercado</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section3">Disciplinas</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section4">footer</a>
+    </li>
+   
+  </ul>
+</nav>
+
 <?php
 require_once "conexao.php";
 $id = $_GET["id"];
@@ -24,42 +78,6 @@ $n_area = $row2['nome'];
 
 echo <<<END
 
-<head>
-<title>$nome</title>
-<meta charset="utf-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="icon" href="Imagens/ultimo.png">
-  <!--isso é o icone do decision no title-->
-</head>    
-
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
-<nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color: #19256c">  
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="decision.php">Início</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="areas.php?id=$area_id">$n_area</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#section1">$nome</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#section2">Mercado</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#section3">Disciplinas</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#section4">footer</a>
-    </li>
-   
-  </ul>
-</nav>
 <div id="section1" class="container-fluid " style="padding-top:70px;padding-bottom:10px; background-color: #ffffff">
    <div class="container">
     <div class="row">
@@ -91,7 +109,7 @@ echo <<<END
             <div class="col-12 text-center my-5">
                 <h1>Disciplinas</h1>
             </div>
-            <p align="justify">$disciplinas</p>
+            <p align="justify">$disciplinas</p><br>
             
             <p align="justify"><b>Duração média do curso: </b>$duracao</p>
         </div>
