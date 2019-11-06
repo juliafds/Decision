@@ -64,26 +64,31 @@
     $mercado = $row['mercado'];
 
     echo <<<END
-<div id="section1" class="container-fluid " style="padding-top:70px;padding-bottom:10px; background-color: #ffffff">
+<div id="section1" class="container-fluid" style="padding-top:70px;padding-bottom:10px; background-color: #ffffff">
    <div class="container">
     <div class="row">
-    <div class="col-12 text-center my-5">
+    <center>
+    <div class="col-10 text-center my-5">
     <h1 class="display-4 ">$nome</h1>
+  
       <br>
      <p align="justify">$desc</p>
-    </div>
+    </div></center>
+    
   </div>
   </div>
 </div>
 
-<div id="section2" class="container-fluid " style="padding-top:40px;padding-bottom:70px; background-color: #ffffff">
+<div id="section2" class="container-fluid " style="padding-top:40px;padding-bottom:70px; background-image:">
   <div class="container">
    <div class="row">
-   <div class="col-12 text-center my-5">
-     <h5 class="display-4">Mercado</h5 class="display-4">
+   <center>
+   <div class="col-10 text-center my-5">
+     <h5 class="display-4">Mercado de Trabalho</h5 class="display-4">
      <br>
      <p align="justify">$mercado</p>
    </div>
+   </center>
  </div>
  </div>
 </div>
@@ -132,7 +137,7 @@ for($j = 0; $j < $rows; ++$j){
           <div class="card-body">
             <a href="subareas.php?id=$id"><h5 class="card-title">$nome</h5></a>
              <br>
-            <p class="card-text" align="justify">$peqdesc</p>
+            <p class="card-text" align="justify" style="margin-left: 50px;">$peqdesc</p>
          
           </div>
         </div>

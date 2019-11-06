@@ -8,7 +8,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   
-  <link rel="icon" href="Imagens/ultimo.png">
+  <link rel="icon" href="Imagens/original.png">
   <!--isso é o icone do decision no title-->
 
 <style>
@@ -88,7 +88,7 @@
     <li class="nav-item">
       <a class="nav-link" href="#section8">Sobre nós</a>
     </li>
-      <li class="nav-item">
+      <li style="text-align: left">
           <a class="nav-link" href="home.php">Admin</a>
       </li>
 
