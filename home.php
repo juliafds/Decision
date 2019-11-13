@@ -14,6 +14,7 @@
             <a class="nav-item nav-link active" href="http://localhost/home.php">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="http://localhost/area/form_list.php">Área</a>
             <a class="nav-item nav-link" href="http://localhost/subarea/form_list.php">SubÁrea</a>
+            <a class="nav-item nav-link" href="http://localhost/pergunta/form_list.php">Pergunta</a>
         </div>
     </div>
 </nav>
