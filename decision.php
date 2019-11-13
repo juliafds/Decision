@@ -112,21 +112,21 @@
   </ul>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="imagens/teste1.jpg" alt="Los Angeles">
+      <img src="imagens/flyerone.jpg" alt="Los Angeles">
       <div class="carousel-caption">
-        <h3>Los Angeles</h3>
-        <p>We had such a great time in LA!</p>
+        <h3>Decision</h3>
+        <p>O seu site vocacional!</p>
       </div>   
     </div> 
     <div class="carousel-item">
-      <img src="imagens/teste1.jpg" alt="Chicago">
+      <img src="imagens/flyertwo.jpg" alt="Chicago">
       <div class="carousel-caption">
-        <h3>Chicago</h3>
-        <p>Thank you, Chicago!</p>
+        <h3>Qual será a sua vocação para 2020?</h3>
+        <p>Descubra conosco!</p>
       </div>   
     </div>
     <div class="carousel-item">
-      <img src="imagens/teste1.jpg" alt="New York">
+      <img src="imagens/flyerthree.jpg" alt="New York">
       <div class="carousel-caption">
         <h3>New York</h3>
         <p>We love the Big Apple!</p>
