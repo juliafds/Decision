@@ -53,47 +53,47 @@
 
   <!-- barra de navegação do site  (não edita aqui >:-p  ) -->
 <!--------------------------------------navbar----------------------------------------->
-<nav class="navbar navbar-expand-sm navbar-dark sticky-top fixed-top" style="background-color: #19256c">
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="#section1">Início</a>
-    </li>
-      <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Áreas
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <?php
 
-              require_once "conexao.php";
-              $query = "select id, nome from area";
-              $result =$conn->query($query);
-              if(!$result) die("Fatal Error");
-              $rows = $result->num_rows;
 
-              for($j = 0; $j < $rows; ++$j){
-                  $row = $result->fetch_assoc();
-                  $id = $row['id'];
-                  echo "<a class='dropdown-item' href='areas.php?id=$id'>" . $row['nome'] . "</a>";
-              }
-              ?>
-          </div>
-      </li>
-    <li class="nav-item">
-       <li class="nav-item">
-      <a class="nav-link" href="#section6">Mercado</a>
-    </li>
-      <a class="nav-link" href="#section7">Quiz</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#section8">Sobre nós</a>
-    </li>
-      <li style="text-align: left">
-          <a class="nav-link" href="home.php">Admin</a>
-      </li>
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top fixed-top" style="background-color: #19256c">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#section1">Início</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Áreas
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <?php
+                    require_once "conexao.php";
+                    $query = "select id, nome from area";
+                    $result =$conn->query($query);
+                    if(!$result) die("Fatal Error");
+                    $rows = $result->num_rows;
+                    for($j = 0; $j < $rows; ++$j){
+                        $row = $result->fetch_assoc();
+                        $id = $row['id'];
+                        echo "<a class='dropdown-item' href='areas.php?id=$id'>" . $row['nome'] . "</a>";
+                    }
+                    ?>
+                </div>
+            </li>
+            <li class="nav-item">
+            <li class="nav-item">
+                <a class="nav-link" href="#section6">Mercado</a>
+            </li>
+            <a class="nav-link" href="#section7">Quiz</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#section8">Sobre nós</a>
+            </li>
+            <li style="text-align: left">
+                <a class="nav-link" href="home.php">Admin</a>
+            </li>
 
-  </ul>
-</nav>
+        </ul>
+    </nav>
 
 <!--------------------------------------navbar----------------------------------------->
 

@@ -79,7 +79,7 @@
   </div>
 </div>
 
-<div id="section2" class="container-fluid " style="padding-top:40px;padding-bottom:70px; background-image:">
+<div id="section2" class="container-fluid " style="padding-top:40px;padding-bottom:70px;">
   <div class="container">
    <div class="row">
    <center>
