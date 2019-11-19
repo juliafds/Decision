@@ -128,8 +128,8 @@
     <div class="carousel-item">
       <img src="imagens/flyerthree.jpg" alt="New York">
       <div class="carousel-caption">
-        <h3>New York</h3>
-        <p>We love the Big Apple!</p>
+        <h3>Para mais informações acesse:</h3>
+        <p>https://exame.abril.com.br/carreira/as-tendencias-atuais-do-mercado-de-trabalho-para-ter-emprego-em-5-anos/</p>
       </div>   
     </div>
   </div>
