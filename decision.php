@@ -209,7 +209,11 @@ END;
                     <h1 class="display-4">Mercado de Trabalho</h1>
                     <br>
                     <p align="justify">
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                        A integração competitiva da economia brasileira à economia global e a conquista da estabilidade influenciaram estruturalmente o funcionamento do mercado de trabalho do País.
+                        Foram registradas, na década 1990 e ao longo dos últimos anos, dinâmicas particularmente relevantes nos quesitos emprego, formalidade e renda dos trabalhadores, o que exigiu mudanças substantivas na atuação das instituições que regulam as relações trabalhistas.
+
+                        O Governo Federal brasileiro, por seu turno, empenhado em corrigir as distorções inerentes à evolução do mercado de trabalho, vem desenvolvendo programas de fomento ao emprego e ao trabalho e de proteção e assistência ao trabalhador, contando com recursos do Fundo de Amparo ao Trabalhador – FAT.
+                            Seu objetivo é criar mecanismos que permitam a melhoria das condições de trabalho e da qualidade de vida do trabalhador, destacando-se as ações nas áreas de qualificação profissional, seguro-desemprego, abono salarial, geração de emprego e renda, inspeção do trabalho e legislação trabalhista.
                     </p>
                 </div>
             </div>
