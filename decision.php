@@ -202,7 +202,7 @@ END;
 </div>
 
 
-<div id="section6" class="container-fluid" style="padding-top:70px;padding-bottom:70px; background-image: url(imagens/mercado.jpg); background-attachment: fixed; color: white;">
+    <div id="section6" class="container-fluid" style="padding-top:70px;padding-bottom:70px; background-image: url(imagens/mercado.jpg); background-attachment: fixed; color: white;">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center my-4">
