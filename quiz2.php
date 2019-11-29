@@ -20,7 +20,7 @@
 <nav class="navbar navbar-expand-sm navbar-dark sticky-top fixed-top" style="background-color: #19256c">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#section1">Início</a>
+        <a class="nav-link" href="decision.php">Início</a>
       </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

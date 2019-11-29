@@ -73,7 +73,7 @@
 <nav class="navbar navbar-expand-sm navbar-dark sticky-top fixed-top" style="background-color: #19256c">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#section1">Início</a>
+        <a class="nav-link" href="decision.php">Início</a>
       </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -174,7 +174,7 @@
 <!-- style="background-image: url(imagens/teste/fundo4.jpg);background-attachment: fixed;linear-gradient(rgba(0, 0, 0, 0.4), rbga(0,0,0,0.4));"-->
       <div class="container-fluid"  style="padding-bottom: 140px; padding-top: 70px; background-image: url(imagens/fundo7.jpg); background-attachment: fixed;  background-repeat: no-repeat;">
       <h3 class="text-center" style="color:#E6E6FA; margin: 50px; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: #000;"> O que está esperando? Faça o teste já! </h3 >
-        <center><a href="quiz2.html" style="text-decoration: none;"><button type="button" class="btn  btn-sm btn-block bt" >Fazer o Quiz</button></a></center>
+        <center><a href="quiz2.php" style="text-decoration: none;"><button type="button" class="btn  btn-sm btn-block bt" >Fazer o Quiz</button></a></center>
     </div>
 <br>
 </body>
