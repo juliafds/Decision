@@ -1,299 +1,191 @@
-<html lang="pt-br">
-<head>
-    <title>Decision</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<?php
+require_once "cabecalho.php";
+?>
 
-    <link rel="icon" href="Imagens/original.png">
-    <!--isso é o icone do decision no title-->
-
-    <style>
-
-        .carousel-inner img {
-            width: 100%;
-            height: 100%;
-        }
-
-    </style>
-</head>
-
-
-<div data-spy="scroll" data-target=".navbar" data-offset="50">
-
-    <!--
-      https://getbootstrap.com.br/docs/4.1/utilities/spacing/
-      https://getbootstrap.com/docs/4.1/getting-started/introduction/
-      Algumas classes úteis:
-      * my-1 my-2 ... my-5  (margem no eixo y)
-      * mt-1 mt-2 ... mt-5  (margem somente no topo)
-      * container (cria um "bloco" que já deixa os componentes responsivos)
-      * container-fluid (faz ele usar)
-      * row (separa uma linha)
-      * col (separa as colunas)  vai no w3schools ou bootstrap/documentation e vê mais sobre isso
-      * bg-success  bg-warning  bg-primary (são as cores de fundo padrão do bootstrap: bg -> background)
-      * justify-content-sm-center (coloca os componentes no centro) usei nos cards e no navbar antigo
-      * display , usado na tag <h></h>e e talvez em <p></p> são outras possibilidades de tamanho (vão de 1 a 5)
-    -->
-
-    <!-- esse aqui é o jumbotrom (serve pra colocar algum texto importante pra chamar atenção )
-        depois vamos mover ele pra algum lugar por enquanto pode deixar aqui ou se vc tiver uma ideia melhor... ahsuahsuahsuas
-      -->
-
-    <!-- <div class="jumbotron text-center" style="margin-bottom:0">
-        <h1>Decision</h1>
-        <p>At vero eos et accusamus et iusto odio dignissimos</p>
-      </div> -->
-
-    <!-- barra de navegação do site  (não edita aqui >:-p  ) -->
-    <!--------------------------------------navbar----------------------------------------->
-
-
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top fixed-top" style="background-color: #19256c;">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#section1">Início</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Áreas
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <?php
-                    require_once "conexao.php";
-                    $query = "select id, nome from area";
-                    $result =$conn->query($query);
-                    if(!$result) die("Fatal Error");
-                    $rows = $result->num_rows;
-                    for($j = 0; $j < $rows; ++$j){
-                        $row = $result->fetch_assoc();
-                        $id = $row['id'];
-                        echo "<a class='dropdown-item' href='areas.php?id=$id'>" . $row['nome'] . "</a>";
-                    }
-                    ?>
-                </div>
-            </li>
-            <li class="nav-item">
-            <li class="nav-item">
-                <a class="nav-link" href="#section6">Mercado</a>
-            </li>
-            <a class="nav-link" href="quiz.php">Quiz</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#section8">Sobre nós</a>
-            </li>
-            <li style="text-align: left">
-                <a class="nav-link" href="home.php">Admin</a>
-            </li>
-
+<!--------------------------------------carrosel----------------------------------------->
+<div id="carrosel" class="container-fluid" style="padding:0px;">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
         </ul>
-    </nav>
-
-    <!--------------------------------------navbar----------------------------------------->
-
-
-    <!-- divisão do site em blocos: cada seção corresponde a um bloco -->
-
-    <!--------------------------------------carrousel----------------------------------------->
-    <div id="section1" class="container-fluid" style="padding:0px;">
-
-
-        <div id="demo" class="carousel slide" data-ride="carousel">
-            <ul class="carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-            </ul>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="imagens/flyerone.jpg" alt="Los Angeles">
-                    <div class="carousel-caption">
-                        <h3>Decision</h3>
-                        <p>O seu site vocacional!</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="imagens/flyertwo.jpg" alt="Chicago">
-                    <div class="carousel-caption">
-                        <h3>Qual será a sua vocação para 2020?</h3>
-                        <p>Descubra conosco!</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="imagens/flyerthree.jpg" alt="New York">
-                    <div class="carousel-caption">
-                        <h3>Para mais informações acesse:</h3>
-                        <p>https://exame.abril.com.br/carreira/as-tendencias-atuais-do-mercado-de-trabalho-para-ter-emprego-em-5-anos/</p>
-                    </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="imagens/flyerone.jpg" alt="Los Angeles">
+                <div class="carousel-caption">
+                    <h3>Decision</h3>
+                    <p>O seu site vocacional!</p>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-        </div>
-
-
-
-    </div>
-    <!--------------------------------------carrousel----------------------------------------->
-
-
-    <!---------------------------------esse é o nosso onepage--------------------------------->
-
-    <div id="section2" class="container-fluid " style="padding-top:70px;padding-bottom:70px; background-color: #ffffff;">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-12 text-center my-4">
-                    <h1 class="display-4">Áreas</h1>
-
+            <div class="carousel-item">
+                <img src="imagens/flyertwo.jpg" alt="Chicago">
+                <div class="carousel-caption">
+                    <h3>Qual será a sua vocação para 2020?</h3>
+                    <p>Descubra conosco!</p>
                 </div>
             </div>
-
-            <!-- criando os cards -->
-            <div class="row justify-content-sm-center" style="padding:0px">
-
-                <?php
-                require_once "conexao.php";
-                $query = "select id, nome, imagem, peqdesc from area";
-                $result =$conn->query($query);
-                if(!$result) die("Fatal Error");
-                $rows = $result->num_rows;
-                for($j = 0; $j< $rows; ++$j){
-                    $row = $result->fetch_assoc();
-                    $id = $row['id'];
-                    $nome = $row['nome'];
-                    $imagem = $row['imagem'];
-                    $peqdesc= $row['peqdesc'];
-                    echo <<<END
-<div class="col-sm-6 col-md-4 ">
-      <div class="card mb-5 ">
-          <img class="card-img-top " img src="$imagem"  style="width:100%">
-        <div class="card-body">
-            <a href="areas.php?id=$id"><h4 class="card-title">$nome</h4></a>
-            <p class="card-text">$peqdesc</p>
+            <div class="carousel-item">
+                <img src="imagens/flyerthree.jpg" alt="New York">
+                <div class="carousel-caption">
+                    <h3>Para mais informações acesse:</h3>
+                    <p>https://exame.abril.com.br/carreira/as-tendencias-atuais-do-mercado-de-trabalho-para-ter-emprego-em-5-anos/</p>
+                </div>
+            </div>
         </div>
-      </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
     </div>
+</div>
+<!--------------------------------------carrousel----------------------------------------->
+
+<!---------------------------------esse é o nosso onepage--------------------------------->
+
+<div id="areas" class="container-fluid " style="padding-top:70px;padding-bottom:70px; background-color: #ffffff;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center my-4">
+                <h1 class="display-4">Áreas</h1>
+            </div>
+        </div>
+        <!-- criando os cards -->
+        <div class="row justify-content-sm-center" style="padding:0px">
+            <?php
+            require_once "conexao.php";
+            $query = "select id, nome, imagem, peqdesc from area";
+            $result =$conn->query($query);
+            if(!$result) die("Fatal Error");
+            $rows = $result->num_rows;
+            for($j = 0; $j< $rows; ++$j){
+                $row = $result->fetch_assoc();
+                $id = $row['id'];
+                $nome = $row['nome'];
+                $imagem = $row['imagem'];
+                $peqdesc= $row['peqdesc'];
+                echo <<<END
+                <div class="col-sm-6 col-md-4 ">
+                  <div class="card mb-5 ">
+                      <img class="card-img-top " img src="$imagem"  style="width:100%">
+                    <div class="card-body">
+                        <a href="areas.php?id=$id"><h4 class="card-title">$nome</h4></a>
+                        <p class="card-text">$peqdesc</p>
+                    </div>
+                  </div>
+                </div>
 END;
-                }
-                ?>
-
-
-            </div>
-
-
+            }
+            ?>
         </div>
     </div>
+</div>
 
 
-    <div id="section6" class="container-fluid" style="padding-top:70px;padding-bottom:70px; background-image: url(imagens/img2.png); background-attachment: fixed; color: white; background-repeat: no-repeat; background-size: 100%; background-position: center;">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center my-4">
-                    <h1 class="display-4">Mercado de Trabalho</h1>
-                    <br>
-                    <p align="justify">
-                        A integração competitiva da economia brasileira à economia global e a conquista da estabilidade influenciaram estruturalmente o funcionamento do mercado de trabalho do País.
-                        Foram registradas, na década 1990 e ao longo dos últimos anos, dinâmicas particularmente relevantes nos quesitos emprego, formalidade e renda dos trabalhadores, o que exigiu mudanças substantivas na atuação das instituições que regulam as relações trabalhistas.
+<div id="mercado" class="container-fluid" style="padding-top:70px;padding-bottom:70px; background-image: url(imagens/img2.png); background-attachment: fixed; color: white; background-repeat: no-repeat; background-size: 100%; background-position: center;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center my-4">
+                <h1 class="display-4">Mercado de Trabalho</h1>
+                <br>
+                <p align="justify">
+                    A integração competitiva da economia brasileira à economia global e a conquista da estabilidade influenciaram estruturalmente o funcionamento do mercado de trabalho do País.
+                    Foram registradas, na década 1990 e ao longo dos últimos anos, dinâmicas particularmente relevantes nos quesitos emprego, formalidade e renda dos trabalhadores, o que exigiu mudanças substantivas na atuação das instituições que regulam as relações trabalhistas.
 
-                        O Governo Federal brasileiro, por seu turno, empenhado em corrigir as distorções inerentes à evolução do mercado de trabalho, vem desenvolvendo programas de fomento ao emprego e ao trabalho e de proteção e assistência ao trabalhador, contando com recursos do Fundo de Amparo ao Trabalhador – FAT.
-                        Seu objetivo é criar mecanismos que permitam a melhoria das condições de trabalho e da qualidade de vida do trabalhador, destacando-se as ações nas áreas de qualificação profissional, seguro-desemprego, abono salarial, geração de emprego e renda, inspeção do trabalho e legislação trabalhista.
-                    </p>
-                </div>
+                    O Governo Federal brasileiro, por seu turno, empenhado em corrigir as distorções inerentes à evolução do mercado de trabalho, vem desenvolvendo programas de fomento ao emprego e ao trabalho e de proteção e assistência ao trabalhador, contando com recursos do Fundo de Amparo ao Trabalhador – FAT.
+                    Seu objetivo é criar mecanismos que permitam a melhoria das condições de trabalho e da qualidade de vida do trabalhador, destacando-se as ações nas áreas de qualificação profissional, seguro-desemprego, abono salarial, geração de emprego e renda, inspeção do trabalho e legislação trabalhista.
+                </p>
             </div>
         </div>
     </div>
+</div>
 
 
-    <div id="section6" class="container-fluid" style="padding-top:70px;padding-bottom:70px; background-color: #ffffff;">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center my-4">
-                    <h1 class="display-4">O que somos nós?</h1>
-                    <br>
-                    <p align="justify">
+<div id="quemsomos" class="container-fluid" style="padding-top:70px;padding-bottom:70px; background-color: #ffffff;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center my-4">
+                <h1 class="display-4">O que somos nós?</h1>
+                <br>
+                <p align="justify">
 
-                        O projeto nomeado de “Decision” é uma plataforma online que prototipamos e estamos a desenvolver. e forma que estaremos disponibilizando em nossa plataforma áreas do mercado de trabalho, cursos, universidades e até mesmo um quiz. E com tudo sempre voltado para futuros acadêmicos que ainda não sabem o que cursar e pretendem buscar ao menos uma noção do que lhe trará uma maior afinidade.
-                        A ideia surgiu a partir de que nós mesmos, estudantes, nem sempre saímos do ensino médio com a certeza do que realmente queremos para nosso futuro. Então, por quê não fazer um projeto integrando tudo o que nós já aprendemos para realizar algo que possa nos conceder uma base para o nosso futuro?
-                        Sendo assim, esperamos realizar um projeto diferenciado dos outros e com uma boa qualidade de conhecimento e estética do site.
+                    O projeto nomeado de “Decision” é uma plataforma online que prototipamos e estamos a desenvolver. e forma que estaremos disponibilizando em nossa plataforma áreas do mercado de trabalho, cursos, universidades e até mesmo um quiz. E com tudo sempre voltado para futuros acadêmicos que ainda não sabem o que cursar e pretendem buscar ao menos uma noção do que lhe trará uma maior afinidade.
+                    A ideia surgiu a partir de que nós mesmos, estudantes, nem sempre saímos do ensino médio com a certeza do que realmente queremos para nosso futuro. Então, por quê não fazer um projeto integrando tudo o que nós já aprendemos para realizar algo que possa nos conceder uma base para o nosso futuro?
+                    Sendo assim, esperamos realizar um projeto diferenciado dos outros e com uma boa qualidade de conhecimento e estética do site.
 
-                    </p>
-                </div>
+                </p>
             </div>
         </div>
     </div>
+</div>
 
 
 
-    <div id="section8" class="container-fluid" style="padding-top:70px;padding-bottom:70px; background-color:#ffffff;">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center my-5">
-                    <h1 class="display-4">Sobre nós</h1>
-                    <br>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4">
-                <img class="card-img-top" img src="Imagens/gabi.jpeg">
-                <div class="card-body">
-                    <h4 class="card-title" style="text-align: center;">Gabriela Neves</h4>
-                </div>
+<div id="sobre" class="container-fluid" style="padding-top:70px;padding-bottom:70px; background-color:#ffffff;">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center my-5">
+                <h1 class="display-4">Sobre nós</h1>
+                <br>
             </div>
         </div>
-        <!----------------------------Gabi------------------------------->
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center my-5">
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <img class="card-img-top" img src="Imagens/ju.jpeg">
-                <div class="card-body">
-                    <h4 class="card-title" style="text-align: center;">Júlia Ferreira</h4>
-                </div>
-            </div>
-        </div>
-        <!----------------------------Júlia------------------------------->
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center my-5">
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <img class="card-img-top" img src="Imagens/cubo.jpeg" style="">
-                <div class="card-body">
-                    <h4 class="card-title" style="text-align: center;">Kezia Souza</h4>
-                </div>
-            </div>
-        </div>
-        <!----------------------------Kezia------------------------------->
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center my-5">
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <img class="card-img-top" img src="Imagens/bia.jpeg">
-                <div class="card-body">
-                    <h4 class="card-title" style="text-align: center;">Bianca Dubberstein</h4>
-                </div>
-            </div>
-        </div>
-        <!----------------------------Bianca------------------------------->
 
+        <div class="col-sm-6 col-md-4">
+            <img class="card-img-top" img src="Imagens/gabi.jpeg">
+            <div class="card-body">
+                <h4 class="card-title" style="text-align: center;">Gabriela Neves</h4>
+            </div>
+        </div>
     </div>
+    <!----------------------------Gabi------------------------------->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center my-5">
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <img class="card-img-top" img src="Imagens/ju.jpeg">
+            <div class="card-body">
+                <h4 class="card-title" style="text-align: center;">Júlia Ferreira</h4>
+            </div>
+        </div>
+    </div>
+    <!----------------------------Júlia------------------------------->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center my-5">
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <img class="card-img-top" img src="Imagens/cubo.jpeg" style="">
+            <div class="card-body">
+                <h4 class="card-title" style="text-align: center;">Kezia Souza</h4>
+            </div>
+        </div>
+    </div>
+    <!----------------------------Kezia------------------------------->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center my-5">
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <img class="card-img-top" img src="Imagens/bia.jpeg">
+            <div class="card-body">
+                <h4 class="card-title" style="text-align: center;">Bianca Dubberstein</h4>
+            </div>
+        </div>
+    </div>
+    <!----------------------------Bianca------------------------------->
+
+</div>
 </div>
 </div>
 
 <!---------------------------------esse é o nosso onepage--------------------------------->
 
-</body>
-</html>
+<?php
+require_once "rodape.php";
+?>
