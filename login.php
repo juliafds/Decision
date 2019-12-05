@@ -14,6 +14,7 @@ if(isset($login)){
 
 
     $row = $result->fetch_assoc();
+    $idr = $row['id'];
     $loginr = $row['login'];
     $nomer = $row['nome'];
     $adminr = $row['admin'];
@@ -27,6 +28,7 @@ if(isset($login)){
         die();
     }
     else{
+        $_SESSION['id'] = $idr;
         $_SESSION['login'] = $login;
         $_SESSION['senha'] = $senha;
         $_SESSION['admin'] = $adminr;
