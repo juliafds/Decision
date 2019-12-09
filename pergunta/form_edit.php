@@ -55,7 +55,7 @@ if ($objetivo=='A'){
     $fk = $id;
     $retorno = $url_root.'/pergunta/form_edit.php?id='.$id;
     require_once '..\opcoes_pergunta\form_list.php';
-    require_once '..\area_pergunta\form_list.php';
+    require_once '..\area_opcoes_pergunta\form_list.php';
 }
 
 echo "</body></html>";

@@ -10,7 +10,7 @@ require_once '..\conexao.php';
 $id = $_GET["id"];
 if (empty($fk)) {$fk = $_GET["fk"];}
 if (empty($retorno)) {$retorno = $_GET["retorno"];}if (empty($retorno)) {$retorno = $_POST["retorno"];}
-$query = "select area_id, pergunta_id, peso from area_pergunta where id= $id";
+$query = "select area_id, opcoes_id, peso from area_opcoes_pergunta where id= $id";
 $result = $conn->query($query);
 if(!$result) die("Fatal Error");
 $rows = $result->num_rows;
@@ -19,7 +19,7 @@ if ($rows == 0)
 {
     $objetivo='I';
     $area_id = 0;
-    $pergunta_id = 0;
+    $opcoes_id = 0;
     $peso = '';
     $nome_submit = 'Inserir';
 }
@@ -29,7 +29,7 @@ else
     $result->data_seek(0);
     $row = $result->fetch_assoc();
     $area_id = $row['area_id'];
-    $pergunta_id = $row['pergunta_id'];
+    $opcoes_id = $row['opcoes_id'];
     $peso = $row['peso'];
     $nome_submit = 'Alterar';
 }
@@ -74,11 +74,12 @@ _END;
     </div>
     
     <div class="form-group">
-        <label for="pergunta_id">Id da pergunta</label>
-        <select class="form-control" name="pergunta_id">
+        <label for="opcoes_id">Id da opcao</label>
+        <select class="form-control" name="opcoes_id">
         <option value="erro">Selecione...</option>
 _END;
-$query1 = "SELECT pergunta.id, pergunta.descricao FROM pergunta";
+$query1 = "SELECT opcoes_pergunta.id, opcoes_pergunta.descricao, opcoes_pergunta.pergunta_id
+ FROM opcoes_pergunta where opcoes_pergunta.pergunta_id=$fk order by ordem";
 
 $result1 = $conn->query($query1);
 if(!$result1) die("Fatal Error");
@@ -87,13 +88,13 @@ for ($j = 0; $j < $rows1; ++$j)
 {
     $result1->data_seek($j);
     $row1 = $result1->fetch_assoc();
-    if ($row1['id'] == $row['pergunta_id'] ||  ($row1['id'] == $fk))
+    if ($row1['id'] == $row['opcoes_id'] ||  ($row1['id'] == $fk))
     {
-        echo "<option value=".$row1['id']."  selected>".$row1['descricao']."</option>";
+        echo "<option value=".$row1['id']."  selected>".$row1['id']. "</option>";
     }
     else
     {
-        echo "<option value=".$row1['id']." >".$row1['descricao']."</option>";
+        echo "<option value=".$row1['id']." >".$row1['id']."</option>";
     }
 
 }

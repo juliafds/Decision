@@ -26,7 +26,7 @@ echo <<<_END
 <th>Id</th>
 <th>Descrição</th>
 <th>Ordem</th>
-<th>Pergunta id</th>
+<th>&nbsp;</th>
 </tr>
 _END;
 
@@ -40,7 +40,7 @@ for ($j = 0; $j < $rows; ++$j){
     echo "<td><a href='$url_root/opcoes_pergunta/form_edit.php?id=$id&retorno=$retorno'>" . $id . "</a></td>";
     echo "<td><a href='$url_root/opcoes_pergunta/form_edit.php?id=$id&retorno=$retorno'>" . $row['descricao'] . "</a></td>";
     echo "<td><a href='$url_root/opcoes_pergunta/form_edit.php?id=$id&retorno=$retorno'>" . $row['ordem'] . "</a></td>";
-    echo "<td><a href='$url_root/opcoes_pergunta/form_edit.php?id=$id&retorno=$retorno'>" . $row['pergunta_id'] . " - " . $row['descricao1'] . "</a></td>";
+    #echo "<td><a href='$url_root/opcoes_pergunta/form_edit.php?id=$id&retorno=$retorno'>" . $row['pergunta_id'] . " - " . $row['descricao1'] . "</a></td>";
 
 
     echo "<td><a href='javascript:confirmaExclusao2($id);' class=\"btn btn-secondary btn-lg active\" role=\"button\">X</a></td>";
