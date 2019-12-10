@@ -9,7 +9,9 @@ require_once "cabecalho.php";
    <center> <div class = "col-sm-8 my-5 " style="color: #E6E6FA;">
     <h1 class = "text-center display-4" style="margin-top: 100px;"> Descubra sua vocação  </h1>
       <br>
-     <p align = "justify" class="text-center my-3" style="font-size: 20px;"> Decidir qual profissão seguir gera muita ansiedade, indecisão e expectativa, mas muita calma nessa hora! Para te ajudar nessa escolha super importante, preparamos um teste vocacional que pode ser a sua luz no fim do túnel! </p>
+     <p class="text-center my-3" style="font-size: 20px;text-align: justify"> Decidir qual profissão seguir gera muita ansiedade, indecisão e expectativa, mas muita calma nessa hora!
+         Para te ajudar nessa escolha super importante, o Decision preparou um teste vocacional que pode ser a sua luz no fim do túnel!
+         Esperamos poder te ajudar contribuindo para o seu futuro!</p>
    <!-- <a href="quiz2.html" style="text-decoration:0 none;"> <button type="button" class="btn  btn-sm btn-block bt">Fazer o Quiz</button></a> -->
     </div></center>
   </div>
@@ -61,10 +63,10 @@ require_once "cabecalho.php";
     <br>
 
 <!-- style="background-image: url(imagens/teste/fundo4.jpg);background-attachment: fixed;linear-gradient(rgba(0, 0, 0, 0.4), rbga(0,0,0,0.4));"-->
-      <div class="container-fluid"  style="padding-bottom: 140px; padding-top: 70px; background-image: url(imagens/fundo7.jpg); background-attachment: fixed;  background-repeat: no-repeat;">
-      <h3 class="text-center" style="color:#E6E6FA; margin: 50px; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: #000;"> O que está esperando? Faça o teste já! </h3 >
-        <center><a href="quiz_perguntas.php" style="text-decoration: none;"><button type="button" class="btn  btn-sm btn-block bt" >Fazer o Quiz</button></a></center>
-    </div>
+<div class="container-fluid"  style="padding-bottom: 140px; padding-top: 70px; background-image: url(imagens/fundo_quiz.jpg); background-attachment: fixed;">
+    <h3 class="text-center" style="color:  #E6E6FA; margin: 50px; margin: 50px; -webkit-text-stroke-width: 0.5px; -webkit-text-stroke-color: #000;">O que está esperando? Faça o teste já! </h3>
+    <center><a href="quiz_perguntas.php" style="text-decoration: none;"><button type="button" class="btn-lg bt" >Fazer o Quiz</button></a></center>
+</div>
 <br>
 <?php
 require_once "rodape.php";

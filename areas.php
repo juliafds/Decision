@@ -13,29 +13,29 @@
     $mercado = $row['mercado'];
 
     echo <<<END
-<div id="section1" class="container-fluid" style="padding-top:70px;padding-bottom:10px; background-color: #ffffff">
+<div id="section1" class="container-fluid" style="padding-top:70px;padding-bottom:10px; background-color: #ffffff;  margin-top: -70px;">
    <div class="container">
     <div class="row">
     <center>
     <div class="col-10 text-center my-5">
-    <h1 class="display-4 ">$nome</h1>
+    <h1 class="display-4">$nome</h1>
   
       <br>
-     <p align="justify">$desc</p>
+     <p align="justify" style="font-size: 18px; ">$desc</p>
     </div></center>
     
   </div>
   </div>
 </div>
 
-<div id="section2" class="container-fluid " style="padding-top:40px;padding-bottom:70px;">
+<div id="section2" class="container-fluid " style="padding-top:40px;padding-bottom:70px; background-color:#DCDCDC;">
   <div class="container">
    <div class="row">
    <center>
    <div class="col-10 text-center my-5">
      <h5 class="display-4">Mercado de Trabalho</h5 class="display-4">
      <br>
-     <p align="justify">$mercado</p>
+     <p align="justify" style="font-size: 18px; ">$mercado</p>
    </div>
    </center>
  </div>

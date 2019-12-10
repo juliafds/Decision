@@ -24,7 +24,7 @@ $n_area = $row2['nome'];
 
 echo <<<END
 
-<div id="section1" class="container-fluid " style="padding-top:70px;padding-bottom:10px; background-color: #ffffff">
+<div id="section1" class="container-fluid " style="padding-top:70px;padding-bottom:10px; background-color: #ffffff; margin-top: -60px;">
    <div class="container">
     <div class="row">
     <div class="col-12 my-5">
@@ -37,7 +37,7 @@ echo <<<END
   </div>
 </div>
 
-<div id="section2" class="container-fluid " style="padding-top: 0px;padding-bottom:70px; ">
+<div id="section2" class="container-fluid " style="padding-top: 0px;padding-bottom:70px; margin-top: -40px; background-color: #DCDCDC;">
   <div class="container">
    <div class="row">
    <div class="col-12 my-5">
@@ -49,7 +49,7 @@ echo <<<END
  </div>
 </div>
 
-<div id="section3" class="container-fluid " style="padding-top:0px;padding-bottom:70px; background-color: #ffffff">
+<div id="section3" class="container-fluid " style="padding-top:0px;padding-bottom:70px; background-color: #ffffff; margin-top: -50px;">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center my-5">
@@ -67,5 +67,3 @@ echo <<<END
 
 END;
 require_once "rodape.php";
-?>
-

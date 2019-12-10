@@ -25,7 +25,7 @@
     <div class="container">
         <div class="row">
         <div class="col-sm" style="text-align: center;">
-            <img class="card-img-top" img src="Imagens/cubo.jpeg" style="border-radius: 100%; max-width:200px;
+            <img class="card-img-top" img src="Imagens/kezia.jpg" style="border-radius: 100%; max-width:200px;
                  max-height:150px; width: auto; height: auto;">
             <b><p>Kezia de Jesus de Souza</p></b>
             <p>keziajsouz@gmail.com </p>
@@ -39,7 +39,7 @@
         </div>
 
         <div class="col-sm" style="text-align: center;">
-            <img class="card-img-top" img src="Imagens/gabi.jpeg" style="border-radius: 100%; max-width:200px;
+            <img class="card-img-top" img src="Imagens/gabi2.jpg" style="border-radius: 100%; max-width:200px;
              max-height:150px; width: auto; height: auto;">
             <b><p>Gabriela dos Santos Neves</p></b>
             <p>gabrielasantosneves11@gmail.com</p>
