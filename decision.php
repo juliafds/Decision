@@ -103,25 +103,6 @@ END;
 </div>
 
 
-<div id="quemsomos" class="container-fluid" style="padding-top:70px;padding-bottom:70px; background-color: #ffffff;">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center my-4">
-                <h1 class="display-4">O que somos nós?</h1>
-                <br>
-                <p align="justify">
-
-                    O projeto nomeado de “Decision” é uma plataforma online que prototipamos e estamos a desenvolver. e forma que estaremos disponibilizando em nossa plataforma áreas do mercado de trabalho, cursos, universidades e até mesmo um quiz. E com tudo sempre voltado para futuros acadêmicos que ainda não sabem o que cursar e pretendem buscar ao menos uma noção do que lhe trará uma maior afinidade.
-                    A ideia surgiu a partir de que nós mesmos, estudantes, nem sempre saímos do ensino médio com a certeza do que realmente queremos para nosso futuro. Então, por quê não fazer um projeto integrando tudo o que nós já aprendemos para realizar algo que possa nos conceder uma base para o nosso futuro?
-                    Sendo assim, esperamos realizar um projeto diferenciado dos outros e com uma boa qualidade de conhecimento e estética do site.
-
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 
 <div id="sobre" class="container-fluid" style="padding-top:70px;padding-bottom:70px; background-color:#ffffff;">
     <div class="container">
@@ -129,60 +110,15 @@ END;
             <div class="col-12 text-center my-5">
                 <h1 class="display-4">Sobre nós</h1>
                 <br>
-            </div>
-        </div>
+                <p align="justify">
 
-        <div class="col-sm-6 col-md-4">
-            <img class="card-img-top" img src="Imagens/gabi.jpeg">
-            <div class="card-body">
-                <h4 class="card-title" style="text-align: center;">Gabriela Neves</h4>
+                O Decision é uma plataforma online criamos para o nosso Projeto Integrador no Curso de Informática para Internet integrado ao Ensino Médio no IFES Campus Serra.
+                Disponibilizamos pesquisas realizadas sobre áreas co mercado de trabalho, cursos e até mesmo um quiz programado por nós mesmos. E com tudo sempre voltado para futuros acadêmicos que ainda não sabem o que cursar e pretendem buscar ao menos uma noção do que lhe trará uma maior afinidade.
+                </p>
             </div>
         </div>
     </div>
-    <!----------------------------Gabi------------------------------->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center my-5">
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-            <img class="card-img-top" img src="Imagens/ju.jpeg">
-            <div class="card-body">
-                <h4 class="card-title" style="text-align: center;">Júlia Ferreira</h4>
-            </div>
-        </div>
-    </div>
-    <!----------------------------Júlia------------------------------->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center my-5">
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-            <img class="card-img-top" img src="Imagens/cubo.jpeg" style="">
-            <div class="card-body">
-                <h4 class="card-title" style="text-align: center;">Kezia Souza</h4>
-            </div>
-        </div>
-    </div>
-    <!----------------------------Kezia------------------------------->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center my-5">
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-4">
-            <img class="card-img-top" img src="Imagens/bia.jpeg">
-            <div class="card-body">
-                <h4 class="card-title" style="text-align: center;">Bianca Dubberstein</h4>
-            </div>
-        </div>
-    </div>
-    <!----------------------------Bianca------------------------------->
 
-</div>
-</div>
-</div>
 
 <!---------------------------------esse é o nosso onepage--------------------------------->
 

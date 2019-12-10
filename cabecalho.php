@@ -73,11 +73,9 @@
                 <a class="nav-link" href="decision.php?#mercado">Mercado</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="decision.php?#quemsomos">Quem Somos</a>
+                <a class="nav-link" href="decision.php?#sobre">Sobre nós</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="decision.php?#sobre">Sobre</a>
-            </li>
+
 
         </ul>
     </div>
