@@ -9,8 +9,8 @@ require_once "cabecalho.php";
    <center> <div class = "col-sm-8 my-5 " style="color: #E6E6FA;">
     <h1 class = "text-center display-4" style="margin-top: 100px;"> Descubra sua vocação  </h1>
       <br>
-     <p align = "justify" class="text-center my-3" style="font-size: 20;"> Decidir qual profissão seguir gera muita ansiedade, indecisão e expectativa, mas muita calma nessa hora! Para te ajudar nessa escolha super importante, preparamos um teste vocacional que pode ser a sua luz no fim do túnel! </p>
-   <!-- <a href="quiz2.html" style="text-decoration: none;"> <button type="button" class="btn  btn-sm btn-block bt">Fazer o Quiz</button></a> -->
+     <p align = "justify" class="text-center my-3" style="font-size: 20px;"> Decidir qual profissão seguir gera muita ansiedade, indecisão e expectativa, mas muita calma nessa hora! Para te ajudar nessa escolha super importante, preparamos um teste vocacional que pode ser a sua luz no fim do túnel! </p>
+   <!-- <a href="quiz2.html" style="text-decoration:0 none;"> <button type="button" class="btn  btn-sm btn-block bt">Fazer o Quiz</button></a> -->
     </div></center>
   </div>
 </div>

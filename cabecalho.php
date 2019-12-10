@@ -78,9 +78,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="decision.php?#sobre">Sobre</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="quiz_home.php">Quiz</a>
-            </li>
+
         </ul>
     </div>
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 ">
@@ -112,7 +110,10 @@
                     ";
                 }
                 if(isset($logado)){
-                    echo"
+                    echo"                    
+                     <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"quiz_home.php\">Quiz</a>
+                    </li>
                     <li class=\"nav-item\">
                         <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
                         Bem-Vindo, $logado
