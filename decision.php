@@ -22,7 +22,7 @@ require_once "cabecalho.php";
                 <img src="imagens/flyertwo.jpg" alt="Chicago">
                 <div class="carousel-caption">
                     <h3>Qual será a sua vocação para 2020?</h3>
-                    <p>Descubra conosco!</p>
+                    <p>Faça login para descobrir!</p>
                 </div>
             </div>
             <div class="carousel-item">
