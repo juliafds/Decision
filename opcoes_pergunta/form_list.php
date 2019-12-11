@@ -37,9 +37,9 @@ for ($j = 0; $j < $rows; ++$j){
     $row = $result->fetch_assoc();
     $id = $row['id'];
     echo "<tr>";
-    echo "<td><a href='$url_root/opcoes_pergunta/form_edit.php?id=$id&retorno=$retorno'>" . $id . "</a></td>";
-    echo "<td><a href='$url_root/opcoes_pergunta/form_edit.php?id=$id&retorno=$retorno'>" . $row['descricao'] . "</a></td>";
-    echo "<td><a href='$url_root/opcoes_pergunta/form_edit.php?id=$id&retorno=$retorno'>" . $row['ordem'] . "</a></td>";
+    echo "<td><a href='$url_root/opcoes_pergunta/form_edit.php?id=$id&retorno=$retorno&fk=$fk'>" . $id . "</a></td>";
+    echo "<td><a href='$url_root/opcoes_pergunta/form_edit.php?id=$id&retorno=$retorno&fk=$fk'>" . $row['descricao'] . "</a></td>";
+    echo "<td><a href='$url_root/opcoes_pergunta/form_edit.php?id=$id&retorno=$retorno&fk=$fk'>" . $row['ordem'] . "</a></td>";
     #echo "<td><a href='$url_root/opcoes_pergunta/form_edit.php?id=$id&retorno=$retorno'>" . $row['pergunta_id'] . " - " . $row['descricao1'] . "</a></td>";
 
 
